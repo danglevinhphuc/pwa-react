@@ -19,7 +19,7 @@ self.addEventListener("install", function(event) {
 
 var preLoad = function(){
   console.log("Installing web app");
-  return caches.open(CACHE_NAME).then(function(cache) {
+  return caches.open("offline").then(function(cache) {
     console.log("caching index and important routes");
     return cache.addAll(urlsToCache);
   });
