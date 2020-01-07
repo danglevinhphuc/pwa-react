@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "express": "^4.17.1",
     "prop-types": "^15.6.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -13,12 +14,12 @@
     "webpack-dev-server": "^3.10.1"
   },
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "start": "npm run dev",
     "build": "webpack --mode production",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "start-sw": "http-server ./build",
-    "heroku-prebuild": "npm install --dev"
+    "client": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "server": "nodemon server",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"

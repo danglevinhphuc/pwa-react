@@ -30,13 +30,5 @@ module.exports = {
     path: __dirname + "/public",
     publicPath: "/",
     filename: "bundle.js"
-  },
-  devServer: {
-    contentBase: "./public",
-    compress: true,
-    port: 9000,
-    allowedHosts: [
-      'https://reactpwac.herokuapp.com/'
-    ]
   }
 };
