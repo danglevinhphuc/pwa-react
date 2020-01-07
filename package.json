@@ -1,5 +1,5 @@
 {
-  "name": "lesson14-cart-redux",
+  "name": "pwa react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,7 +15,8 @@
     "build": "webpack --mode production",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "start-sw": "http-server ./build"
+    "start-sw": "http-server ./build",
+    "heroku-prebuild": "npm install --dev"
   },
   "eslintConfig": {
     "extends": "react-app"
